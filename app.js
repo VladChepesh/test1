@@ -9,7 +9,7 @@ fetch("data/solutions.json")
 });
 function renderSolutions(data){
     container.innerHTML="";
-    data.array.forEach(item => {
+    data.forEach(item => {
         const card =document.createElement("div");
         card.className ="solutions-card";
         card.innerHTML =`
@@ -34,3 +34,4 @@ function filterSolutions(){
     renderSolutions(filtered);
 }
 statusSelect.addEventListener("change", filterSolutions)
+
