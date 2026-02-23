@@ -1,0 +1,82 @@
+[
+  {
+    "id": "solution-1",
+    "name": "Speech Analytics Platform",
+    "descriptionShort": "Produktive Lösung zur Analyse interner Sprachdaten.",
+    "descriptionLong": "Diese Platform analysiert automatisch interne Sprachufzeihnungen und unterstützt  verschidene Formate. Ziel ist eine strukturierte Auswertung.",
+    "owner": "ITD Data Team",
+    "status": "produktiv",
+    "category": "Agent",
+    "link": "https://example.com/speech"
+  },
+  {
+    "id": "solution-2",
+    "name": "Ticket Klassifizierungs Bot",
+    "descriptionShort": "Automatische Klassifizierung von Support-Ticket.",
+    "descriptionLong": "Der bot analysiert eingehende Tickets und ordent sie automatisch Kategorieren zu. Ziel ist eine schnellere Bearbeitung.",
+    "owner": "Innovation Lab",
+    "status": "prototyp",
+    "category": "Tool",
+    "link": "https://example.com/ticket"
+  },
+  {
+    "id": "solution-3",
+    "name": "Security Monitoring Dashboard",
+    "descriptionShort": "Überwachung sicherheitsrelevanter Ereignisse.",
+    "descriptionLong": "Dashboard zur zentralen Anzeige sicherheitsrelevanter Logs. Unterstütz Echtzeit-Analyse und Reporting.",
+    "owner": "Security Team",
+    "status": "in Entwicklung",
+    "category": "Agent",
+    "link": "https://example.com/security"
+  },
+  {
+    "id": "solution-4",
+    "name": "HR Dokument-Assistent",
+    "descriptionShort": "Analyse und Strukturierung von HR-Dokument.",
+    "descriptionLong": "Unerstütz HR-Abteilungen bei der automatischen Dokumentenanalyse. Spart Zeit bei der Verarbeitung.",
+    "owner": "HR Digital Team",
+    "status": "prototyp",
+    "category": "Agent",
+    "link": "https://example.com/hr"
+  },
+  {
+    "id": "solution-5",
+    "name": "Chatbot Support",
+    "descriptionShort": "Inerner Support-Chatbot.",
+    "descriptionLong": "Produktiever Chatbot zur Unterstützung bei IT-Anfragen. Verfügbar für alle Mitarbeitenden. Reduziert Support-Tickets.",
+    "owner": "Service Desk",
+    "status": "produktiv",
+    "category": "Agent",
+    "link": "https://example.com/chatbot"
+  },
+  {
+    "id": "solution-6",
+    "name": "Predictive Meintenance",
+    "descriptionShort": "Vorhersage technischer Ausfälle.",
+    "descriptionLong": "Analysiert Sensordaten zur Vorhersage von Ausfällen. Unterstützt Wartungsplanung.",
+    "owner": "Engineering IT",
+    "status": "in Entwicklung",
+    "category": "Tool",
+    "link": "https://example.com/meintenance"
+  },
+  {
+    "id": "solution-7",
+    "name": "Rechnungsverarbeitung",
+    "descriptionShort": "Automatische Rechnungsbearbeitung.",
+    "descriptionLong": "System zur automatischen Erfassung und Verarbeitung von Rechnungen. Produktiv im Finance-Bereich.",
+    "owner": "Finance IT",
+    "status": "produktiv",
+    "category": "Tool",
+    "link": "https://example.com/finance"
+  },
+  {
+    "id": "solution-8",
+    "name": "Meeting Zusammenfassung",
+    "descriptionShort": "Automatische Ersellung von Meeting-Zusammenfassungen .",
+    "descriptionLong": "Erstellt strukturierte Zusammenfassungen aus Meeting-Transkripten. Spart Zeit in Projektteams.",
+    "owner": "Digital Innovation",
+    "status": "prototyp",
+    "category": "Prototyp",
+    "link": "https://example.com/meeting"
+  }
+]
