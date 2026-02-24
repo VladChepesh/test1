@@ -55,10 +55,11 @@ body{
     border: 1px solid #ccc;
 }
 #solutionsContainer{
+    background-color: #f4f6f8
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: 30px;
 }
 .solution-card{
     background-color: white;
@@ -72,10 +73,13 @@ body{
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 .soluton-card h3{
-    margin-top: 0;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
 }
 .solution-card p{
-    margin: 5px 0;
+    margin: 8px 0;
 }
+
 
 
