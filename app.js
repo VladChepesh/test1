@@ -27,11 +27,12 @@ function renderSolutions(data){
 } 
 function filterSolutions(){
     const selectedStatus= statusSelect.value;
-    const filtered = solutionsData.filter(item=>{
-        return selectedStatus === "all" || 
-        item.status === selectedStatus;
-    });
+    const filtered = solutionsData.filter(item=>
+    selectedStatus === "all" || item.status ===selectedStatus
+    );
     renderSolutions(filtered);
 }
 statusSelect.addEventListener("change", filterSolutions)
+
+
 
