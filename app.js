@@ -26,14 +26,16 @@ function renderSolutions(data){
     });
 } 
 function filterSolutions(){
-    console.log("filter triggered")
+    console.log("Selected status:", selectedStatus)
+    console.log("filter triggered");
     const selectedStatus= statusSelect.value;
     const filtered = solutionsData.filter(item=>
-    selectedStatus === "all" || item.status ===selectedStatus
+    selectedStatus === "all" || item.status.toLowerCase() ===selectedStatus.toLowerCase
     );
     renderSolutions(filtered);
 }
-statusSelect.addEventListener("change", filterSolutions)
+statusSelect.addEventListener("change", filterSolutions);
+
 
 
 
