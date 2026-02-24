@@ -30,11 +30,11 @@ function filterSolutions(){
     console.log("Selected status:", selectedStatus);
     console.log("filter triggered");
     const filtered = solutionsData.filter(item=>
-    selectedStatus === "all" || item.status.toLowerCase() === selectedStatus.toLowerCase()
-    );
+    selectedStatus === "all" || item.status.toLowerCase() === selectedStatus.toLowerCase());
     renderSolutions(filtered);
 }
 statusSelect.addEventListener("change", filterSolutions);
+
 
 
 
