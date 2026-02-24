@@ -26,6 +26,7 @@ function renderSolutions(data){
     });
 } 
 function filterSolutions(){
+    console.log("filter triggered")
     const selectedStatus= statusSelect.value;
     const filtered = solutionsData.filter(item=>
     selectedStatus === "all" || item.status ===selectedStatus
@@ -33,6 +34,7 @@ function filterSolutions(){
     renderSolutions(filtered);
 }
 statusSelect.addEventListener("change", filterSolutions)
+
 
 
 
