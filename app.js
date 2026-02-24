@@ -32,13 +32,14 @@ function filterSolutions(){
     console.log("Selected status:", selectedStatus);
     console.log("filter triggered");
     const filtered = solutionsData.filter(item=>
-    const matchesStatus = selectedStatus === "all" || item.status.toLowerCase() === selectedStatus.toLowerCase()
+    const matchesStatus = selectedStatus === "all" || item.status.toLowerCase() === selectedStatus.toLowerCase();
     const matchesSearch = item.name.toLowerCase().includes(searchText) || item.descriptionShort.toLowerCase().includes(searchText);
  }); 
  renderSolutions(filtered);
 }
 searchInput.addEventListener("input", filterSolutions);
 statusSelect.addEventListener("change", filterSolutions);
+
 
 
 
