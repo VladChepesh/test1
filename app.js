@@ -31,14 +31,16 @@ function filterSolutions(){
     const searchText = searchInput.value.toLowerCase();
     console.log("Selected status:", selectedStatus);
     console.log("filter triggered");
-    const filtered = solutionsData.filter(item=>
+    const filtered = solutionsData.filter(item=>{
     const matchesStatus = selectedStatus === "all" || item.status.toLowerCase() === selectedStatus.toLowerCase();
     const matchesSearch = item.name.toLowerCase().includes(searchText) || item.descriptionShort.toLowerCase().includes(searchText);
- });)
+ return matchesStatus && matchesSearch;
+    });
  renderSolutions(filtered);
 }
 statusSelect.addEventListener("change", filterSolutions);
 searchInput.addEventListener("input", filterSolutions);
+
 
 
 
