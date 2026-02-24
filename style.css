@@ -76,10 +76,12 @@ body{
     margin-bottom: 12px;
     padding-bottom: 8px;
     border-bottom: 1px solid #eee;
+    front-size: 18px;
 }
 .solution-card p{
     margin: 8px 0;
 }
+
 
 
 
