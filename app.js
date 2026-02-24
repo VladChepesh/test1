@@ -1,6 +1,7 @@
 console.log ("JS loaded")
 const container = document.getElementById ("solutionsContainer");
 const statusSelect = document.getElementById("statusSelect");
+const searchInput = document.getElementById("searchInput")
 let solutionsData = [];
 fetch("data/solutions.json")
 .then(response=> response.json())
@@ -26,14 +27,19 @@ function renderSolutions(data){
     });
 } 
 function filterSolutions(){
-    const selectedStatus = statusSelect.value;
+    const selectedStatus = statusSelect.value.toLowerCase();
+    const searchText = searchInput.value.toLowerCase();
     console.log("Selected status:", selectedStatus);
     console.log("filter triggered");
     const filtered = solutionsData.filter(item=>
-    selectedStatus === "all" || item.status.toLowerCase() === selectedStatus.toLowerCase());
-    renderSolutions(filtered);
+    const matchesStatus = selectedStatus === "all" || item.status.toLowerCase() === selectedStatus.toLowerCase()
+    const matchesSearch = item.name.toLowerCase().includes(searchText) || item.descriptionShort.toLowerCase().includes(searchText);
+ }); 
+ renderSolutions(filtered);
 }
+searchInput.addEventListener("input", filterSolutions);
 statusSelect.addEventListener("change", filterSolutions);
+
 
 
 
