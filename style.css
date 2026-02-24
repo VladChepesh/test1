@@ -41,3 +41,41 @@ body{
     background: #2563eb;
     color: white;
     border-color: #1e40af;}
+.filters {
+    display: flex;
+    justify-content: center;
+    gap:15px;
+    margin: 20px 0;
+}
+.filters select,
+.filters input{
+    paddig:8px 12px;
+    front-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+#solutions Container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: cener;
+    gap: 20px;
+    padding: 0 20px 40px 20px;
+}
+.solution-card{
+    background-color: white;
+    border-radius:10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    padding: 20px;
+    width: 250px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.solutions-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.soluton-card h3{
+    margin-top: 0;
+}
+.solution-card p{
+    margin: 5px 0;
+}
