@@ -44,15 +44,15 @@ function filterSolutions(){
  renderSolutions(filtered);
 }
 function openModal(solution){
-    modalTitle.textContent = solution.name;
+    modaltitle.textContent = solution.name;
     modalDescription.textContent = solution.descriptionLong;
-    modalStatul.textContent = solution.status;
+    modalstatul.textContent = solution.status;
     modal.classList.remove("hidden");
 }
 closeBtn.addEventListener("click", () => {
     modal.classList.add("hidden");
 });
-widow.addEventListener("click", (e) => {
+window.addEventListener("click", (e) => {
     if (e.target === modal){
         modal.classList.add("hidden");
     }
@@ -64,6 +64,7 @@ document.addEventListener("keydown", (e) => {
 });
 statusSelect.addEventListener("change", filterSolutions);
 searchInput.addEventListener("input", filterSolutions);
+
 
 
 
