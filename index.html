@@ -36,17 +36,24 @@
             <div class= "modal-content">
                 <span id="close-btn" class= "close-btn">&times;</span>
                 <h2 id= "modalTitle"></h2>
-                <p id="modalDescription"></p>
-                <p>
-                    <strong>Status:</strong>
-                    <span id="modalStatus"></span>
-                </p>
+                <p id = "modalDescriptionShort" class="modal-short-desc"></p>
+                <div class="modal-details">
+                    <p><strong>Kategorie:</strong><span id="modalCategory"></span></p>
+                    <p><strong>Owner:</strong><span id="modalOwner"></span></p>
+                    <p><strong>Status:</strong><span id="modalStatus"></span></p>
+                </div>
+                <div class="modal-long-desc">
+                    <h3>Detaillierre Beschreibung:</h3>
+                    <p id="modalDescription"></p>
+                </div>
+                <a id="modalLink" href = "#" target = "_blank" class= "btn-link">Zum Lösung</a>
             </div>
         </div>
         <script src="app.js"></script>
     </body>
 
 </html>
+
 
 
 
