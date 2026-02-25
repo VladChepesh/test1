@@ -144,7 +144,7 @@ html{
     background-color: #f8f9fa;
     border-bottom: 1px solid #ddd;
 }
-.status-indikator{
+.status-indicator{
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -166,6 +166,7 @@ html{
     background-color: #17a2b8; 
     box-shadow: 0 0 5px #17a2b8;
 }
+
 
 
 
