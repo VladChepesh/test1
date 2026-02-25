@@ -122,6 +122,22 @@ html{
     front-size: 28px;
     cursor: pointer;
 }
+.modal-short-desc{
+    front-style: italic;
+    color: #666;
+    border-bottom: 1px solid #eee;
+    padding-botom: 10px;
+}
+.btn-link{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #007bff
+    color: white;
+    text-decorations: none;
+    border-radius: 5px
+}
+
 
 
 
