@@ -137,8 +137,13 @@ html{
     text-decorations: none;
     border-radius: 5px
 }
-
-
+.results-info{
+    padding: 10px 20px;
+    front-weight: bold;
+    color: #555;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
 
 
 
