@@ -2,7 +2,7 @@ console.log ("JS loaded")
 const container = document.getElementById ("solutionsContainer");
 const statusSelect = document.getElementById("statusSelect");
 const searchInput = document.getElementById("searchInput");
-const resultsCount = document.getElementById("resultCount")
+const resultsCount = document.getElementById("resultsCount")
 
 const modal = document.getElementById("modal");
 const modalTitle = document.getElementById("modalTitle");
@@ -20,7 +20,7 @@ fetch("data/solutions.json")
     renderSolutions(data);
 });
 function renderSolutions(data){
-    resultsCount.textContent = data.length;
+    if(resultsCount){resultsCount.textContent = data.length;}
     container.innerHTML="";
     if(data.length === 0){
         container.innerHTML = "<p style='padding: 20px;'>Keine Lösungen gefunden.</p>";
@@ -79,6 +79,7 @@ document.addEventListener("keydown", (e) => {
 });
 statusSelect.addEventListener("change", filterSolutions);
 searchInput.addEventListener("input", filterSolutions);
+
 
 
 
