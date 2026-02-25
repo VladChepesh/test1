@@ -20,7 +20,7 @@ fetch("data/solutions.json")
     renderSolutions(data);
 });
 function renderSolutions(data){
-    resultCount.textContent = data.length;
+    resultsCount.textContent = data.length;
     container.innerHTML="";
     if(data.length === 0){
         container.innerHTML = "<p style='padding: 20px;'>Keine Lösungen gefunden.</p>";
@@ -79,6 +79,7 @@ document.addEventListener("keydown", (e) => {
 });
 statusSelect.addEventListener("change", filterSolutions);
 searchInput.addEventListener("input", filterSolutions);
+
 
 
 
