@@ -3,7 +3,7 @@ const container = document.getElementById ("solutionsContainer");
 const statusSelect = document.getElementById("statusSelect");
 const searchInput = document.getElementById("searchInput");
 const modal = document.getElementById("modal");
-const modalTitle = document.getElementById("modalTitle");
+const modaltitle = document.getElementById("modalTitle");
 const modalDescription = document.getElementById("modalDescription");
 const modalstatus = document.getElementById("modalstatus");
 const closeBtn = document.getElementById("close-btn");
@@ -64,6 +64,7 @@ document.addEventListener("keydown", (e) => {
 });
 statusSelect.addEventListener("change", filterSolutions);
 searchInput.addEventListener("input", filterSolutions);
+
 
 
 
