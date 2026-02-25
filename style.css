@@ -144,7 +144,28 @@ html{
     background-color: #f8f9fa;
     border-bottom: 1px solid #ddd;
 }
+.status-indikator{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.bg-produktiv{
+    background-color: #28a745; 
+    box-shadow: 0 0 5px #28a745;
+}
 
+.bg-prototyp{
+    background-color: #ffc107; 
+    box-shadow: 0 0 5px #ffc107;
+}
+
+.bg-entwicklung{
+    background-color: #17a2b8; 
+    box-shadow: 0 0 5px #17a2b8;
+}
 
 
 
