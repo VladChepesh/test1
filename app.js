@@ -2,6 +2,7 @@ console.log ("JS loaded")
 const container = document.getElementById ("solutionsContainer");
 const statusSelect = document.getElementById("statusSelect");
 const searchInput = document.getElementById("searchInput");
+const resultsCount = document.getElementByID("resultCount")
 
 const modal = document.getElementById("modal");
 const modalTitle = document.getElementById("modalTitle");
@@ -19,7 +20,12 @@ fetch("data/solutions.json")
     renderSolutions(data);
 });
 function renderSolutions(data){
+    resultCount.textContent = data.length;
     container.innerHTML="";
+    if(data.length === 0){
+        container.innerHTML = "<p style='padding: 20px;'>Keine Lösungen gefunden.</p>";
+        return;
+    }
     data.forEach(item => {
         const card =document.createElement("div");
         card.className ="solutions-card";
@@ -73,6 +79,7 @@ document.addEventListener("keydown", (e) => {
 });
 statusSelect.addEventListener("change", filterSolutions);
 searchInput.addEventListener("input", filterSolutions);
+
 
 
 
