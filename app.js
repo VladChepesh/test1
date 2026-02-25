@@ -44,8 +44,8 @@ function filterSolutions(){
  renderSolutions(filtered);
 }
 function openModal(solution){
-    modalTitle.textContent = solution.title;
-    modalDescription.textContent = solution.description;
+    modalTitle.textContent = solution.name;
+    modalDescription.textContent = solution.descriptionLong;
     modalStatul.textContent = solution.status;
     modal.classList.remove("hidden");
 }
@@ -64,6 +64,7 @@ document.addEventListener("keydown", (e) => {
 });
 statusSelect.addEventListener("change", filterSolutions);
 searchInput.addEventListener("input", filterSolutions);
+
 
 
 
