@@ -2,7 +2,7 @@ console.log ("JS loaded")
 const container = document.getElementById ("solutionsContainer");
 const statusSelect = document.getElementById("statusSelect");
 const searchInput = document.getElementById("searchInput");
-const resultsCount = document.getElementByID("resultCount")
+const resultsCount = document.getElementById("resultCount")
 
 const modal = document.getElementById("modal");
 const modalTitle = document.getElementById("modalTitle");
@@ -79,6 +79,7 @@ document.addEventListener("keydown", (e) => {
 });
 statusSelect.addEventListener("change", filterSolutions);
 searchInput.addEventListener("input", filterSolutions);
+
 
 
 
