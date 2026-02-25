@@ -5,7 +5,7 @@ const searchInput = document.getElementById("searchInput");
 const modal = document.getElementById("modal");
 const modalTitle = document.getElementById("modalTitle");
 const modalDescription = document.getElementById("modalDescription");
-const modalStatus = document.getElementById("modalStatus");
+const modalstatus = document.getElementById("modalstatus");
 const closeBtn = document.getElementById("close-btn");
 let solutionsData = [];
 fetch("data/solutions.json")
@@ -64,6 +64,7 @@ document.addEventListener("keydown", (e) => {
 });
 statusSelect.addEventListener("change", filterSolutions);
 searchInput.addEventListener("input", filterSolutions);
+
 
 
 
