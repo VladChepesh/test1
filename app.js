@@ -2,11 +2,16 @@ console.log ("JS loaded")
 const container = document.getElementById ("solutionsContainer");
 const statusSelect = document.getElementById("statusSelect");
 const searchInput = document.getElementById("searchInput");
+
 const modal = document.getElementById("modal");
 const modalTitle = document.getElementById("modalTitle");
 const modalDescription = document.getElementById("modalDescription");
 const modalStatus = document.getElementById("modalStatus");
 const closeBtn = document.getElementById("close-btn");
+const modalDescriptionShort = document.getElementById("modalDescriptionShort");
+const modalCategory = document.getElementById("modalCategory");
+const modalOwner = document.getElementById("modalOwner");
+const modalLink = document.getElementById("modalLink");
 let solutionsData = [];
 fetch("data/solutions.json")
 .then(response=> response.json())
@@ -45,8 +50,12 @@ function filterSolutions(){
 }
 function openModal(solution){
     modalTitle.textContent = solution.name;
+    modalDescriptionShort.textContent = solution.descriptionShort;
     modalDescription.textContent = solution.descriptionLong;
+    modalCategory.textContent = solution.category;
+    modalOwner.textContent = solution.owner;
     modalStatus.textContent = solution.status;
+    modalLink.textContent = solution.link;
     modal.classList.remove("hidden");
 }
 closeBtn.addEventListener("click", () => {
@@ -64,6 +73,7 @@ document.addEventListener("keydown", (e) => {
 });
 statusSelect.addEventListener("change", filterSolutions);
 searchInput.addEventListener("input", filterSolutions);
+
 
 
 
