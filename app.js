@@ -19,6 +19,12 @@ fetch("data/solutions.json")
 .then(data=> {solutionsData = data;
     renderSolutions(data);
 });
+function getStatusColorClass(status){
+    const s = status.toLowerCase();
+    if (s.includes("produktiv")) return "bg-produktiv"; 
+    if (s.includes("prototyp")) return "bg-prototyp"; 
+    if (s.includes("entwicklung")) return "bg-entwicklung"; 
+}
 function renderSolutions(data){
     if(resultsCount){resultsCount.textContent = data.length;}
     container.innerHTML="";
@@ -32,7 +38,10 @@ function renderSolutions(data){
         card.innerHTML =`
         <h3>${item.name}</h3>
         <p>${item.descriptionShort}</p>
-        <p><strong>Status:</strong>${item.status}</p>
+        <p>
+        <span class ="status-indicator ${getStatusColorClass(item.status)}"></span>
+        <strong>Status:</strong>${item.status}
+        </p>
         <p><strong>Category:</strong>${item.category}</p>
         <p><strong>Kontakt:</strong>${item.owner}</p>
         <p><a href="${item.link}" target="_blank">Mehr erfahren</a></p>
@@ -61,6 +70,8 @@ function openModal(solution){
     modalCategory.textContent = solution.category;
     modalOwner.textContent = solution.owner;
     modalStatus.textContent = solution.status;
+    const indicator = document.getElementById("modalStatusIndicator");
+    indicator.className = "status-indicator"+ getStatusColorClass(item.status);
     modalLink.textContent = solution.link;
     modal.classList.remove("hidden");
 }
@@ -79,6 +90,7 @@ document.addEventListener("keydown", (e) => {
 });
 statusSelect.addEventListener("change", filterSolutions);
 searchInput.addEventListener("input", filterSolutions);
+
 
 
 
