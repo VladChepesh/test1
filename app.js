@@ -39,7 +39,7 @@ function renderSolutions(data){
         <h3>${item.name}</h3>
         <p>${item.descriptionShort}</p>
         <p>
-        <span class ="status-indicator ${getStatusColorClass(item.status)}"></span>
+        <span class="status-indicator ${getStatusColorClass(item.status)}"></span>
         <strong>Status:</strong>${item.status}
         </p>
         <p><strong>Category:</strong>${item.category}</p>
@@ -71,7 +71,7 @@ function openModal(solution){
     modalOwner.textContent = solution.owner;
     modalStatus.textContent = solution.status;
     const indicator = document.getElementById("modalStatusIndicator");
-    indicator.className = "status-indicator"+ getStatusColorClass(solution.status);
+    indicator.className = "status-indicator "+ getStatusColorClass(solution.status);
     modalLink.textContent = solution.link;
     modal.classList.remove("hidden");
 }
@@ -90,6 +90,7 @@ document.addEventListener("keydown", (e) => {
 });
 statusSelect.addEventListener("change", filterSolutions);
 searchInput.addEventListener("input", filterSolutions);
+
 
 
 
