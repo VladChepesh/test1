@@ -82,7 +82,15 @@ body{
 .solutions-card p{
     margin: 8px 0;
 }
-
+#about {
+    margin: 60px 20px;
+    padding: 30px;
+    background-color: #f4f6f8;
+    border-radius:12px;
+}
+html{
+    scroll-behavior: smooth;
+}
 
 
 
