@@ -97,29 +97,32 @@ html{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
-    display:flex;
+    background: rgba(0,0,0,0.7);
+    display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
-.hidden{
+.moda.hidden{
     display: none;
 }
 .modal-content{
     background: white;
     padding: 30px;
-    width: 500px;
-    max-width: 90%;
+    width: 90%;
+    max-width: 500px;
     border-radius: 12px;
     position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
 }
 .close-bth{
     position: absolute;
-    top: 15px;
-    right: 20px;
-    front-size: 24px;
+    top: 10px;
+    right: 15px;
+    front-size: 28px;
     cursor: pointer;
 }
+
 
 
 
