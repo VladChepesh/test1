@@ -3,6 +3,7 @@ const container = document.getElementById ("solutionsContainer");
 const statusSelect = document.getElementById("statusSelect");
 const searchInput = document.getElementById("searchInput");
 const resultsCount = document.getElementById("resultsCount")
+const overviewBtn = document.getElementById("overviewBtn")
 
 const modal = document.getElementById("modal");
 const modalTitle = document.getElementById("modalTitle");
@@ -18,6 +19,16 @@ fetch("data/solutions.json")
 .then(response=> response.json())
 .then(data=> {solutionsData = data;
     renderSolutions(data);
+});
+function resetToOverwiew(){
+    searchInput.value = "";
+    statusSelect.value = "all";
+    renderSolutions(solutionsData);
+    modal.classList.add("hidden");
+}
+overviewBtn.addEventListener("click", (e)=> {
+    e.preventDefault();
+    resetToOverview();
 });
 function getStatusColorClass(status){
     const s = status.toLowerCase();
@@ -90,6 +101,7 @@ document.addEventListener("keydown", (e) => {
 });
 statusSelect.addEventListener("change", filterSolutions);
 searchInput.addEventListener("input", filterSolutions);
+
 
 
 
