@@ -20,7 +20,7 @@ fetch("data/solutions.json")
 .then(data=> {solutionsData = data;
     renderSolutions(data);
 });
-function resetToOverwiew(){
+function resetToOverview(){
     searchInput.value = "";
     statusSelect.value = "all";
     renderSolutions(solutionsData);
@@ -101,6 +101,7 @@ document.addEventListener("keydown", (e) => {
 });
 statusSelect.addEventListener("change", filterSolutions);
 searchInput.addEventListener("input", filterSolutions);
+
 
 
 
