@@ -1,0 +1,379 @@
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+							<style>
+								body {
+									background-color: white; /* Ensure the iframe has a white background */
+								}
+
+								
+							</style>
+                        </head>
+                        <body>
+                            <!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Aufgabenstellung – ITD Lösungsportal</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            margin: 40px;
+            line-height: 1.5;
+            color: #222;
+        }
+        h1, h2, h3, h4 {
+            color: #003366;
+        }
+        h1 {
+            margin-bottom: 0.2em;
+        }
+        h2 {
+            margin-top: 1.5em;
+        }
+        code, pre {
+            font-family: "Fira Code", Consolas, monospace;
+            background: #f5f5f5;
+        }
+        pre {
+            padding: 10px 12px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        ul, ol {
+            margin-top: 0.3em;
+            margin-bottom: 0.8em;
+        }
+        .small {
+            font-size: 0.9em;
+        }
+        .section-sep {
+            margin: 1.2em 0;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Aufgabenstellung</h1>
+<h2>Einfaches internes Portal für ITD-Lösungen (HTML/CSS/JS)</h2>
+
+<h2>Ziel</h2>
+<p>
+    Erstelle eine einfache, statische Website, die als internes Portal für ITD-Lösungen dient.
+    Das Portal soll alle Lösungen (Agents, Tools, Prototypen etc.) übersichtlich anzeigen und
+    grundlegende Informationen zu jeder Lösung bereitstellen. Die Website dient ausschließlich
+    zu Übungszwecken, muss aber funktional und konsistent sein.
+</p>
+
+<h2>Technischer Rahmen</h2>
+<ul>
+    <li>Entwicklungsumgebung: VS Code Web (<a href="https://vscode.dev/" target="_blank">https://vscode.dev/</a>)</li>
+    <li>Technologien: Reines HTML, CSS und JavaScript (kein Framework, kein Build-Tool)</li>
+    <li>Keine Backend-Logik, kein Server, keine Datenbank</li>
+    <li>Die Seite muss lokal im Browser über <code>index.html</code> ausführbar sein.</li>
+</ul>
+
+<h2>Verzeichnisstruktur (fix vorgegeben)</h2>
+<ul>
+    <li><code>index.html</code> – Startseite / Portal</li>
+    <li><code>style.css</code> – zentrales Stylesheet</li>
+    <li><code>app.js</code> – JavaScript für Interaktivität</li>
+    <li><code>data/solutions.json</code> – Beispiel-Datenbestand der Lösungen</li>
+    <li><code>img/</code> – optionaler Ordner für Logos/Icons</li>
+</ul>
+
+<div class="section-sep"></div>
+
+<h2>1. Inhalte und Funktionen</h2>
+
+<h3>1.1 Startseite (<code>index.html</code>)</h3>
+<p>Erstelle eine Seite mit folgendem Aufbau.</p>
+
+<h4>Pflichtbestandteile</h4>
+
+<ol>
+    <li>
+        <strong>Kopfbereich (Header)</strong>
+        <ul>
+            <li>Titel des Portals: <em>ITD Lösungsportal</em></li>
+            <li>Untertitel: <em>Zentrales Portal für interne Agents, Tools und Prototypen</em></li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Navigationsbereich</strong>
+        <ul>
+            <li>Einfache Navigation mit mindestens:
+                <ul>
+                    <li>„Übersicht“ (führt zur Startseite / Listenansicht)</li>
+                    <li>„Über das Portal“ (Anker/Section auf derselben Seite ist ausreichend)</li>
+                </ul>
+            </li>
+            <li>Navigation muss sichtbar und konsistent sein.</li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Filter-/Suchbereich</strong>
+        <ul>
+            <li>Text-Suchfeld, mit dem die Liste der Lösungen live gefiltert wird (mindestens nach Name und Beschreibung).</li>
+            <li>Dropdown zur Filterung nach Status mit mindestens:
+                <ul>
+                    <li>„alle“</li>
+                    <li>„produktiv“</li>
+                    <li>„prototyp“</li>
+                    <li>„in Entwicklung“</li>
+                </ul>
+            </li>
+            <li>Die Filterung muss ohne Neuladen der Seite funktionieren (JavaScript).</li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Listenansicht der Lösungen</strong>
+        <ul>
+            <li>Die Lösungen werden in einer Karten- oder Tabellenansicht angezeigt.</li>
+            <li>Jede Lösung zeigt mindestens folgende Informationen:
+                <ul>
+                    <li>Name der Lösung</li>
+                    <li>Kurzbeschreibung (1–3 Sätze)</li>
+                    <li>Ansprechpartner (Name oder Team)</li>
+                    <li>Status (z. B. „produktiv“, „prototyp“, „in Entwicklung“)</li>
+                    <li>Kategorie (z. B. „Agent“, „Tool“, „Prototyp“)</li>
+                    <li>Link (z. B. zu Dokumentation oder Anwendung; kann ein Platzhalter-Link sein, z. B. <code>https://example.com</code>)</li>
+                </ul>
+            </li>
+            <li>Es müssen mindestens <strong>8 Beispiel-Lösungen</strong> angezeigt werden (über <code>data/solutions.json</code>).</li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Detailansicht (optional, aber empfohlen)</strong>
+        <ul>
+            <li>Beim Klick auf eine Lösung (z. B. auf den Namen) wird eine Detailansicht angezeigt.</li>
+            <li>Varianten:
+                <ul>
+                    <li>Anzeige in einem Overlay/Modal, oder</li>
+                    <li>Anzeige im unteren Bereich der Seite.</li>
+                </ul>
+            </li>
+            <li>In der Detailansicht müssen zusätzlich zur Kurzansicht angezeigt werden:
+                <ul>
+                    <li>ausführlichere Beschreibung (mindestens 3–5 Sätze)</li>
+                    <li>ggf. weitere Infos (z. B. verwendete Technologien, zuständiger Bereich)</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Bereich „Über das Portal“</strong>
+        <ul>
+            <li>Kurze Beschreibung des Zwecks:
+                <ul>
+                    <li>zentrales Portal für ITD-interne Lösungen</li>
+                    <li>Transparenz über vorhandene Lösungen</li>
+                    <li>Förderung von Wiederverwendung</li>
+                </ul>
+            </li>
+            <li>Klarstellung: „Dieses Portal ist ein leichtgewichtiger Einstiegspunkt und ersetzt keine CMDB.“</li>
+        </ul>
+    </li>
+</ol>
+
+<h3>1.2 Datenhaltung (<code>data/solutions.json</code>)</h3>
+<p>Erstelle eine Datei <code>data/solutions.json</code> mit folgendem Aufbau:</p>
+
+<pre>[
+  {
+    "id": "solution-1",
+    "name": "Beispiel-Agent 1",
+    "descriptionShort": "Kurze Beschreibung der Lösung.",
+    "descriptionLong": "Längere Beschreibung mit 3–5 Sätzen.",
+    "owner": "Team XYZ",
+    "status": "produktiv",
+    "category": "Agent",
+    "link": "https://example.com/agent1"
+  }
+  // … mindestens 8 Einträge insgesamt
+]</pre>
+
+<p><strong>Vorgaben:</strong></p>
+<ul>
+    <li>Verwende die Felder <strong>exakt</strong> in dieser Schreibweise:
+        <code>id</code>, <code>name</code>, <code>descriptionShort</code>, <code>descriptionLong</code>,
+        <code>owner</code>, <code>status</code>, <code>category</code>, <code>link</code>.
+    </li>
+    <li>Status-Werte müssen aus einem festen Set kommen (z. B. <code>produktiv</code>, <code>prototyp</code>, <code>in Entwicklung</code>).</li>
+    <li>Die Daten werden in <code>app.js</code> per <code>fetch</code> aus dieser JSON-Datei geladen.</li>
+</ul>
+
+<div class="section-sep"></div>
+
+<h2>2. Funktionale Anforderungen (JavaScript in <code>app.js</code>)</h2>
+
+<h3>Pflicht</h3>
+<ol>
+    <li>
+        <strong>Laden der Daten</strong>
+        <ul>
+            <li>Beim Laden der Seite werden die Einträge aus <code>data/solutions.json</code> geladen.</li>
+            <li>Die Lösungen werden anschließend automatisch in der Listenansicht angezeigt.</li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Suchfunktion</strong>
+        <ul>
+            <li>Textfeld für Suche.</li>
+            <li>Während der Eingabe werden die angezeigten Lösungen live gefiltert.</li>
+            <li>Es muss mindestens in <code>name</code> und <code>descriptionShort</code> gesucht werden.</li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Status-Filter</strong>
+        <ul>
+            <li>Dropdown mit mindestens folgenden Werten:
+                <ul>
+                    <li><code>alle</code></li>
+                    <li><code>produktiv</code></li>
+                    <li><code>prototyp</code></li>
+                    <li><code>in Entwicklung</code></li>
+                </ul>
+            </li>
+            <li>Auswahl eines Status zeigt nur passende Lösungen an.</li>
+            <li>Die Status-Filterung muss mit der Textsuche kombinierbar sein (UND-Verknüpfung).</li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Darstellung</strong>
+        <ul>
+            <li>Die Liste wird dynamisch im DOM erzeugt (kein Hardcoding der Lösungen in HTML).</li>
+            <li>Für jeden Eintrag wird eine eigene Karte oder Tabellenzeile erzeugt, basierend auf den JSON-Daten.</li>
+        </ul>
+    </li>
+</ol>
+
+<h3>Optional (empfohlen)</h3>
+<ul>
+    <li>Detailansicht beim Klick auf eine Lösung (siehe oben).</li>
+    <li>Anzeige, wie viele Lösungen aktuell im Filter-Ergebnis sind (z. B. „X Lösungen gefunden“).</li>
+</ul>
+
+<div class="section-sep"></div>
+
+<h2>3. Layout- und Designanforderungen (CSS in <code>style.css</code>)</h2>
+
+<h3>Pflicht</h3>
+<ol>
+    <li>
+        <strong>Grundlayout</strong>
+        <ul>
+            <li>Klare Struktur:
+                <ul>
+                    <li>Header</li>
+                    <li>Navigationsbereich</li>
+                    <li>Filterbereich</li>
+                    <li>Inhaltsbereich (Listenansicht)</li>
+                </ul>
+            </li>
+            <li>Die Seite muss auf gängigen Desktop-Auflösungen gut lesbar sein.</li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Responsivität (mindestens Basis)</strong>
+        <ul>
+            <li>Bei schmalen Bildschirmen (z. B. &lt; 768 px) sollen Karten/Tabelle sinnvoll umbrechen.</li>
+            <li>Navigation muss weiterhin nutzbar bleiben (auch einfaches Untereinander-Anordnen reicht).</li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Gestaltung</strong>
+        <ul>
+            <li>Einheitliches Farbschema (maximal 3–4 Hauptfarben).</li>
+            <li>Klare visuelle Abgrenzung von:
+                <ul>
+                    <li>Header</li>
+                    <li>Filterbereich</li>
+                    <li>Liste</li>
+                </ul>
+            </li>
+            <li>Lesbare Schrift (Systemschrift oder gängige Webfonts).</li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Markierung von Status</strong>
+        <ul>
+            <li>Status (z. B. <code>produktiv</code>, <code>prototyp</code>) soll optisch hervorgehoben werden, z. B.:
+                <ul>
+                    <li>farbiger Badge / Label,</li>
+                    <li>unterschiedliche Hintergrundfarben,</li>
+                    <li>Rahmen oder Icons.</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ol>
+
+<div class="section-sep"></div>
+
+<h2>4. Nicht erforderlich / ausdrücklich ausgeschlossen</h2>
+<ul>
+    <li>Keine Benutzeranmeldung, kein Rollenmodell, kein echtes SSO.</li>
+    <li>Keine komplexen Freigabe- oder Genehmigungsworkflows.</li>
+    <li>Kein Backend, keine Datenbank, kein Servercode.</li>
+    <li>Keine Frameworks (kein React, Angular, Vue etc.).</li>
+    <li>Keine externen CSS-Libraries (kein Bootstrap, kein Tailwind etc.).</li>
+</ul>
+
+<div class="section-sep"></div>
+
+<h2>5. Abgabekriterien</h2>
+<p>Die Aufgabe gilt als erfüllt, wenn:</p>
+<ol>
+    <li>
+        Die Struktur wie vorgegeben existiert:
+        <ul>
+            <li><code>index.html</code></li>
+            <li><code>style.css</code></li>
+            <li><code>app.js</code></li>
+            <li><code>data/solutions.json</code></li>
+        </ul>
+    </li>
+    <li>
+        Beim Öffnen von <code>index.html</code> im Browser:
+        <ul>
+            <li>Alle Lösungen aus der JSON-Datei geladen und angezeigt werden.</li>
+            <li>Suche und Status-Filter wie beschrieben funktionieren.</li>
+        </ul>
+    </li>
+    <li>Jede Lösung mindestens die geforderten Basisinformationen zeigt.</li>
+    <li>Das Layout übersichtlich, konsistent und auf Desktop gut nutzbar ist.</li>
+    <li>
+        Der Code in HTML, CSS und JavaScript:
+        <ul>
+            <li>lesbar und übersichtlich ist,</li>
+            <li>mit sinnvollen Kurzkommentaren versehen ist (<code>app.js</code>),</li>
+            <li>und die Struktur in <code>index.html</code> grob kommentiert ist.</li>
+        </ul>
+    </li>
+</ol>
+
+</body>
+</html>
+
+							<script>
+                            	
+							</script>
+                        </body>
+                        </html>
+                    
