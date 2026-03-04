@@ -1,10 +1,10 @@
-console.log ("JS loaded")
+// Initialize Dom elements for interface control
 const container = document.getElementById ("solutionsContainer");
 const statusSelect = document.getElementById("statusSelect");
 const searchInput = document.getElementById("searchInput");
 const resultsCount = document.getElementById("resultsCount")
 const overviewBtn = document.getElementById("overviewBtn")
-
+// Modal window elements
 const modal = document.getElementById("modal");
 const modalTitle = document.getElementById("modalTitle");
 const modalDescription = document.getElementById("modalDescription");
@@ -15,11 +15,13 @@ const modalCategory = document.getElementById("modalCategory");
 const modalOwner = document.getElementById("modalOwner");
 const modalLink = document.getElementById("modalLink");
 let solutionsData = [];
+// Fetch solutions data from external JSON file
 fetch("data/solutions.json")
 .then(response=> response.json())
 .then(data=> {solutionsData = data;
     renderSolutions(data);
 });
+// Reset all filters and return to default view
 function resetToOverview(){
     searchInput.value = "";
     statusSelect.value = "all";
@@ -30,12 +32,14 @@ overviewBtn.addEventListener("click", (e)=> {
     e.preventDefault();
     resetToOverview();
 });
+//Determine CSS class for status indicator colors
 function getStatusColorClass(status){
     const s = status.toLowerCase();
     if (s.includes("produktiv")) return "bg-produktiv"; 
     if (s.includes("prototyp")) return "bg-prototyp"; 
     if (s.includes("entwicklung")) return "bg-entwicklung"; 
 }
+//Function to generate and display solutions cards
 function renderSolutions(data){
     if(resultsCount){resultsCount.textContent = data.length;}
     container.innerHTML="";
@@ -62,6 +66,7 @@ function renderSolutions(data){
         
     });
 } 
+// Main filtering logic for search and status
 function filterSolutions(){
     const selectedStatus = statusSelect.value.toLowerCase();
     const searchText = searchInput.value.toLowerCase();
@@ -74,6 +79,7 @@ function filterSolutions(){
     });
  renderSolutions(filtered);
 }
+//Populates and displays the modal with specific solution details
 function openModal(solution){
     modalTitle.textContent = solution.name;
     modalDescriptionShort.textContent = solution.descriptionShort;
@@ -81,11 +87,13 @@ function openModal(solution){
     modalCategory.textContent = solution.category;
     modalOwner.textContent = solution.owner;
     modalStatus.textContent = solution.status;
+    //Update status indicator color dynamically in the modal
     const indicator = document.getElementById("modalStatusIndicator");
     indicator.className = "status-indicator "+ getStatusColorClass(solution.status);
     modalLink.textContent = solution.link;
     modal.classList.remove("hidden");
 }
+// Different ways to close modal
 closeBtn.addEventListener("click", () => {
     modal.classList.add("hidden");
 });
@@ -99,8 +107,11 @@ document.addEventListener("keydown", (e) => {
         modal.classList.add("hidden");
     }
 });
+// Trigger filtering when the status dropdown changes
 statusSelect.addEventListener("change", filterSolutions);
+// Trigger filtering on every keystroke in the search bar
 searchInput.addEventListener("input", filterSolutions);
+
 
 
 
