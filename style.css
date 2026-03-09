@@ -58,11 +58,11 @@ body{
 .nav-link::after{
     content:'';
     position:absolute;
-    bottom: 2px;
+    bottom: 0px;
     left: 0;
     width: 0;
     height: 3px;
-    background-color: #FF6B00
+    background-color: #FF6B00;
     transition: width 0.3s ease;
 }
 .nav-link:hover::after{
@@ -199,6 +199,7 @@ html{
     background-color: #17a2b8; 
     box-shadow: 0 0 5px #17a2b8;
 }
+
 
 
 
