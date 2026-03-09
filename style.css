@@ -59,20 +59,25 @@ body{
     content:'';
     position:absolute;
     bottom: 0px;
-    left: 0;
-    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    scale: 0 1;
     height: 3px;
     background-color: #FF6B00;
-    transition: width 0.3s ease;
+    transition: scale 0.3 ease;
+    transform-origin: center;
 }
 .nav-link:hover::after{
     width: 100%;
+    scale: 1 1;
 }
 .nav-link.active {
     color: #FF6B00;
 }
 .nav-link.active::after{
     width: 100%;
+    scale: 1 1;
 }
 .filters {
     display: flex;
@@ -199,6 +204,7 @@ html{
     background-color: #17a2b8; 
     box-shadow: 0 0 5px #17a2b8;
 }
+
 
 
 
