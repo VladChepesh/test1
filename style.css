@@ -80,7 +80,9 @@ body{
 }
 .filter-section{
     padding: 20px 40px;
-    background-color: #EEEEEE;
+    background-color: #EEEEEE !important;
+    margin-bottom: 0 !important;
+    border: none;
 }
 .filter-container{
     max-width:1200px;
@@ -193,7 +195,9 @@ html{
 }
 .results-info{
     padding: 30px 40px 10px 40px;
-    background-color: #EEEEEE;
+    background-color: #EEEEEE !important;
+    margin-top: 0 !important;
+    border: none;
 }
 .results-container{
     max-width: 1200px;
@@ -230,6 +234,7 @@ html{
     background-color: #17a2b8; 
     box-shadow: 0 0 5px #17a2b8;
 }
+
 
 
 
