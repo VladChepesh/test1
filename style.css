@@ -215,7 +215,7 @@ html{
     font-weight: 600;
     transition: background-color 0.2;
 }
-.solutions-card .btn-link:hover{
+.btn-link:hover{
     background-color: #BD461E;
 }
 .results-info{
@@ -258,6 +258,7 @@ html{
     background-color: #17a2b8; 
     box-shadow: 0 0 5px #17a2b8;
 }
+
 
 
 
