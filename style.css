@@ -192,10 +192,10 @@ html{
     border-radius: 5px
 }
 .results-info{
-    padding: 15px 40px;
+    padding: 20px 40px;
     background-color: #FFFFFF;
 }
-.results-conteiner{
+.results-container{
     max-width: 1200px;
     margin: 0 auto;
     font-size: 14px;
@@ -229,6 +229,7 @@ html{
     background-color: #17a2b8; 
     box-shadow: 0 0 5px #17a2b8;
 }
+
 
 
 
