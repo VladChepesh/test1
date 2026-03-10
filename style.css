@@ -192,11 +192,20 @@ html{
     border-radius: 5px
 }
 .results-info{
-    padding: 10px 20px;
+    padding: 15px 40px;
+    background-color: #FFFFFF;
+}
+.results-conteiner{
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #808080;
+    font-weight: 500;
+}
+#solutionCount{
+    color: #000000;
     font-weight: bold;
-    color: #555;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #ddd;
+    margin-left: 5px;
 }
 .status-indicator{
     display: inline-block;
@@ -220,6 +229,7 @@ html{
     background-color: #17a2b8; 
     box-shadow: 0 0 5px #17a2b8;
 }
+
 
 
 
