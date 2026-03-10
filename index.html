@@ -29,6 +29,11 @@
         <section class="filter-section">
             <div class="filter-container">
                 <input type="text" id="searchInput" placeholder="Suche nach name Oder Beschreibung ...">
+                <div class="results-info">
+                    <div class="results-container">
+                        Gefundedene Lösungen:<span id = "resultsCount">0</span>
+                    </div>
+                </div>
                 <select id="statusSelect">
                     <option value="all">alle</option>
                     <option value="produktiv">produktiv</option>
@@ -37,12 +42,6 @@
                 </select>
             </div>
         </section>
-         <!--Results count-->
-        <div class="results-info">
-            <div class="results-container">
-                Gefundedene Lösungen:<span id = "resultsCount">0</span>
-            </div>
-        </div>
         <section class="solutions" id="solutionsContainer"></section>
         <!--about the Portal sectiont-->
         <section id="about">
@@ -76,6 +75,7 @@
     </body>
 
 </html>
+
 
 
 
