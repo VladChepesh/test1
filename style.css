@@ -192,22 +192,24 @@ html{
     border-radius: 5px
 }
 .results-info{
-    padding: 20px 40px;
+    padding: 30px 40px 10px 40px;
     background-color: #FFFFFF;
 }
 .results-container{
     max-width: 1200px;
     margin: 0 auto;
-    font-size: 14px;
+    font-size: 13px;
     color: #808080;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #EEEEEE;
+    padding-bottom: 10px;
 }
 #solutionCount{
-    color: #000000;
-    font-weight: 800;
-    margin-left: 5px;
-    font-size: 16px;
+    color: #FF6B00;
+    font-size: 15px;
+    margin-left: 4px;
 }
 .status-indicator{
     display: inline-block;
@@ -231,6 +233,7 @@ html{
     background-color: #17a2b8; 
     box-shadow: 0 0 5px #17a2b8;
 }
+
 
 
 
