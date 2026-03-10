@@ -213,6 +213,7 @@ html{
     border: none;
 }
 .results-container{
+    width:100%;
     text-align: right;
     font-size: 11px;
     color: #808080;
@@ -245,6 +246,7 @@ html{
     background-color: #17a2b8; 
     box-shadow: 0 0 5px #17a2b8;
 }
+
 
 
 
