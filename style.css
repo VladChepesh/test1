@@ -91,11 +91,11 @@ body{
     gap: 15px;
     align-items: flex-start;
 }
-.search-group{
+.search-wrapper{
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    gap: 5px
+    gap: 4px
 }
 #searchInput, #statusSelect{
     height: 45px;
@@ -108,11 +108,12 @@ body{
 }
 #searchInput{
     width: 100%;
-    box-sizing: border box;
+    height: 45px;
 }
 #statusSelect{
     min-width: 200px;
     cursor: pointer;
+    height: 45px;
 }
 #searchInput:focus, #statusSelect:focus{
     border: 2px solid #FF6B00;
@@ -209,7 +210,7 @@ html{
 }
 .results-container{
     text-lign: right;
-    font-size: 12px;
+    font-size: 11px;
     color: #808080;
     font-weight: 500;
 }
@@ -240,6 +241,7 @@ html{
     background-color: #17a2b8; 
     box-shadow: 0 0 5px #17a2b8;
 }
+
 
 
 
