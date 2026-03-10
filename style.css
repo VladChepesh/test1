@@ -193,18 +193,15 @@ html{
 }
 .results-info{
     padding: 30px 40px 10px 40px;
-    background-color: #FFFFFF;
+    background-color: #EEEEEE;
 }
 .results-container{
     max-width: 1200px;
     margin: 0 auto;
-    font-size: 13px;
-    color: #808080;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 1px solid #EEEEEE;
-    padding-bottom: 10px;
+    text-align: right;
+    font-size:12px;
+    color: #808080
+    font-weight: 500;
 }
 #solutionCount{
     color: #FF6B00;
@@ -233,6 +230,7 @@ html{
     background-color: #17a2b8; 
     box-shadow: 0 0 5px #17a2b8;
 }
+
 
 
 
