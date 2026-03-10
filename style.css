@@ -130,6 +130,7 @@ body{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 10px;
+    align-items: stretch;
 }
 .solutions-card{
     display:flex;
@@ -260,6 +261,7 @@ html{
     background-color: #17a2b8; 
     box-shadow: 0 0 5px #17a2b8;
 }
+
 
 
 
