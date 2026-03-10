@@ -59,7 +59,7 @@ function renderSolutions(data){
         </p>
         <p><strong>Category:</strong>${item.category}</p>
         <p><strong>Kontakt:</strong>${item.owner}</p>
-        <p><a href="${item.link}" target="_blank">Mehr erfahren</a></p>
+        <p><a href="${item.link}" target="_blank" class="btn-link">Mehr erfahren</a></p>
         `;
         card.addEventListener("click", () => {openModal(item);});
         container.appendChild(card);
@@ -111,6 +111,7 @@ document.addEventListener("keydown", (e) => {
 statusSelect.addEventListener("change", filterSolutions);
 // Trigger filtering on every keystroke in the search bar
 searchInput.addEventListener("input", filterSolutions);
+
 
 
 
