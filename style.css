@@ -96,6 +96,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 4px
+    align-items: flex-end;
 }
 #searchInput, #statusSelect{
     height: 45px;
@@ -244,6 +245,7 @@ html{
     background-color: #17a2b8; 
     box-shadow: 0 0 5px #17a2b8;
 }
+
 
 
 
