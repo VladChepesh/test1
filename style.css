@@ -89,6 +89,7 @@ body{
     margin:0 auto;
     display: flex;
     gap: 15px;
+    align-items: flex-start;
 }
 #searchInput, #statusSelect{
     height: 45px;
@@ -236,6 +237,7 @@ html{
     background-color: #17a2b8; 
     box-shadow: 0 0 5px #17a2b8;
 }
+
 
 
 
