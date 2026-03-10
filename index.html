@@ -27,14 +27,11 @@
         </nav>
         <!--filter section, with status filter and Search Bar-->
         <section class="filter-section">
-            <div class="filter-container">
-                <div class="search-group">
-                    <input type="text" id="searchInput" placeholder="Suche nach name Oder Beschreibung ...">
-                    <div class="results-info">
-                        <div class="results-container">
-                        Gefundedene Lösungen:<span id = "resultsCount">0</span>
-                        </div>
-                    </div>
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" placeholder="Suche nach name Oder Beschreibung ...">
+                <div id="results-container">
+                    Gefundedene Lösungen:<span id = "resultsCount">0</span>
+                </div>
                 <select id="statusSelect">
                     <option value="all">alle</option>
                     <option value="produktiv">produktiv</option>
@@ -76,6 +73,7 @@
     </body>
 
 </html>
+
 
 
 
