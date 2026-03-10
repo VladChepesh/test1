@@ -203,7 +203,7 @@ html{
     color: #808080
     font-weight: 500;
 }
-#solutionCount{
+#resultsCount{
     color: #FF6B00;
     font-size: 15px;
     margin-left: 4px;
@@ -230,6 +230,7 @@ html{
     background-color: #17a2b8; 
     box-shadow: 0 0 5px #17a2b8;
 }
+
 
 
 
