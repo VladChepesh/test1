@@ -91,7 +91,7 @@ body{
 #searchInput, #statusSelect{
     height: 45px;
     padding: 0 15px;
-    background-color:#FFFFFF
+    background-color:#FFFFFF;
     color: #000000;
     border: 1px solid #DDDDDD;
     font-size: 16px;
@@ -230,6 +230,7 @@ html{
     background-color: #17a2b8; 
     box-shadow: 0 0 5px #17a2b8;
 }
+
 
 
 
