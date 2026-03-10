@@ -78,18 +78,35 @@ body{
     width: 100%;
     transform: scaleX(1);
 }
-.filters {
-    display: flex;
-    justify-content: center;
-    gap:15px;
-    margin: 20px 0;
+.filter-section{
+    padding: 20px 40px;
+    background-color: #EEEEEE:
 }
-.filters select,
-.filters input{
-    padding:8px 12px;
+.filter-container{
+    max-width:1200px;
+    margin:0 auto;
+    display: flex;
+    gap: 15px;
+}
+#searchInput, #statusSelect{
+    height: 45px;
+    padding: 0 15px;
+    background-color:#FFFFFF
+    color: #000000;
+    border: 1px solid #DDDDDD;
     font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    outline: none;
+}
+#searchInput{
+    flex-grow: 1;
+}
+#statusSelect{
+    min-width: 200px;
+    cursor: pointer;
+}
+#searchInput:focus, #statusSelect:focus{
+    border: 2px solid #FF6B00;
+    padding: 0 14px;
 }
 #solutionsContainer{
     background-color: #f4f6f8;
@@ -203,6 +220,7 @@ html{
     background-color: #17a2b8; 
     box-shadow: 0 0 5px #17a2b8;
 }
+
 
 
 
