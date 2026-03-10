@@ -91,6 +91,12 @@ body{
     gap: 15px;
     align-items: flex-start;
 }
+.search-group{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
 #searchInput, #statusSelect{
     height: 45px;
     padding: 0 15px;
@@ -101,7 +107,8 @@ body{
     outline: none;
 }
 #searchInput{
-    flex-grow: 1;
+    width: 100%;
+    box-sizing: border box;
 }
 #statusSelect{
     min-width: 200px;
@@ -201,12 +208,8 @@ html{
     border: none;
 }
 .results-container{
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 410px;
-    font-size:12px;
+    text-lign: right;
+    font-size: 12px;
     color: #808080;
     font-weight: 500;
 }
@@ -237,6 +240,7 @@ html{
     background-color: #17a2b8; 
     box-shadow: 0 0 5px #17a2b8;
 }
+
 
 
 
