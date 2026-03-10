@@ -200,12 +200,14 @@ html{
     margin: 0 auto;
     font-size: 14px;
     color: #808080;
-    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 #solutionCount{
     color: #000000;
-    font-weight: bold;
+    font-weight: 800;
     margin-left: 5px;
+    font-size: 16px;
 }
 .status-indicator{
     display: inline-block;
@@ -229,6 +231,7 @@ html{
     background-color: #17a2b8; 
     box-shadow: 0 0 5px #17a2b8;
 }
+
 
 
 
