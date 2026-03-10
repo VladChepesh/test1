@@ -1,7 +1,7 @@
 body{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f4f4f4;
+    background: #EEEEEE;
 }
 .header-container{
     display: flex;
@@ -258,6 +258,7 @@ html{
     background-color: #17a2b8; 
     box-shadow: 0 0 5px #17a2b8;
 }
+
 
 
 
