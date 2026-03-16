@@ -54,8 +54,8 @@ function renderSolutions(data){
         <h3>${item.name}</h3>
         <p>${item.descriptionShort}</p>
         <p>
-        <span class="status-indicator ${getStatusColorClass(item.status)}"></span>
         <strong>Status:</strong>${item.status}
+        <span class="status-indicator ${getStatusColorClass(item.status)}"></span>
         </p>
         <p><strong>Category:</strong>${item.category}</p>
         <p><strong>Kontakt:</strong>${item.owner}</p>
