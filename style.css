@@ -184,12 +184,13 @@ html{
 }
 .modal-content{
     background: white;
-    padding: 30px;
+    padding: 32px;
     width: 90%;
-    max-width: 500px;
-    border-radius: 12px;
+    max-width: 600px;
+    border-radius: 4px;
     position: relative;
     box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    border-top: 6px solid #FF6B00;
 }
 .close-btn{
     position: absolute;
@@ -197,6 +198,9 @@ html{
     right: 15px;
     font-size: 28px;
     cursor: pointer;
+}
+.close-btn:hover{
+    color: #FF6B00;
 }
 .modal-short-desc{
     font-style: italic;
