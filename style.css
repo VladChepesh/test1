@@ -1,14 +1,7 @@
-*{
-    box-sizing: border-box;
-}
 body{
     margin: 0;
-    paqdding: 0;
-    owerflow-x: hidden;
-    display: flex;
     font-family: Arial, Helvetica, sans-serif;
     background: #EEEEEE;
-    min-height: 100vh;
 }
 .header-container{
     display: flex;
