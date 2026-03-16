@@ -169,7 +169,7 @@ body{
     position: relative;
     left: 50%;
     right: 50%;
-    min-height: 300px;
+    min-height: 100px;
     box-sizing: border-box;
     border-top: 6px solid #FF6B00;
 }
