@@ -1,7 +1,14 @@
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 0;
+    paqdding: 0;
+    owerflow-x: hidden;
+    display: flex;
     font-family: Arial, Helvetica, sans-serif;
     background: #EEEEEE;
+    min-height: 100vh;
 }
 .header-container{
     display: flex;
@@ -162,7 +169,10 @@ body{
     margin: 60px 0 0;
     padding: 60px 0px;
     background-color: #FFFFFF;
-    width: 100%,
+    width: 100vw,
+    position: relative;
+    left: 50%;
+    right: 50%;
     min-height: 300px;
     box-sizing: border-box;
     border-top: 6px solid #FF6B00;
